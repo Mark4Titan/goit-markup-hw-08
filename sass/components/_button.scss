@@ -82,3 +82,27 @@
   align-items: center;
   transition: box-shadow var(--timing-animation) var(--animation);
 }
+
+.menu-button {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-animation);
+
+  &:hover,
+  &:focus {
+    color: var(--color-font-accent);
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
