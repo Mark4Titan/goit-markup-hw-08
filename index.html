@@ -29,11 +29,20 @@
                 
 
                 <ul class="navigation-list lists-without-dots">
-                    <li class="navigation-list-item"><a class="nav accent" href="index.html"> Студия</a></li>
-                    <li class="navigation-list-item"><a class="nav" href="portfolio.html"> Портфолио </a></li>
+                    <li class="navigation-list-item"><a class="nav accent" href="index.html">Студия</a></li>
+                    <li class="navigation-list-item"><a class="nav" href="portfolio.html">Портфолио </a></li>
                     <li class="navigation-list-item"><a class="nav" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
+
+
+           
+                <button type="button" class="burger-btn" data-menu-button >
+                    <svg class="burger-icon">            
+                        <use  href="./img/sprite.svg#menu"></use>
+                    </svg>
+                </button>           
+
             
             <ul class="contact-list lists-without-dots">
 
@@ -44,8 +53,8 @@
                                 </svg>
                     info@devstudio.com 
                 </a> 
-                </li>                
-
+                </li>               
+                
                 <li class="contact-item">
                     <a class="nav contact-list-link" href="tel:+380991111111">
                     <svg width="10" height="16" class="icon-Vector">
@@ -57,14 +66,58 @@
 
             </ul>
 
-            <button type="button" class="menu-button" data-menu-button>
-                <svg width="49" height="40" class="menu-button-ico" aria-label="Переключатель мобильного меню" aria-expanded="false"
-                    aria-controls="menu-container">
-                    <use class="menu" href="./img/sprite.svg#menu"></use>
-                    <!-- <use class="cross" href="./img/sprite.svg#cross"></use> -->
+            
+        </div> 
+        
+        
+        
+        <div class="mobile-menu" data-menu>
+
+            <button type="button" class="close-btn" data-menu-close>
+                <svg class="close-icon">
+                    <use href="./img/sprite.svg#cross"></use>
                 </svg>
             </button>
-        </div>        
+
+            <div class="mobile-menu-nav lists-without-dots">
+                <ul class="dropdown-menu-nav lists-without-dots">
+                    <li class="mobile-menu-nav-item">
+                        <a class="mobile-nav-link link accent" href="">Студия </a>
+                    </li>
+                    <li class="mobile-menu-nav-item">
+                        <a class="mobile-nav-link link" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu-nav-item">
+                        <a class="mobile-nav-link link" href="">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="dropdown-menu-contacts lists-without-dots">
+                    <li class="dropdown-menu-contacts-item">
+                        <a class="dropdown-menu-contacts-link link tel" href="tel:+380961111111">
+                            +38 096 111 11 11</a>
+                    </li>
+                    <li class="dropdown-menu-contacts-item">
+                        <a class="dropdown-menu-contacts-link link" href="mailto:info@devstudio.com">
+                            info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="dropdown-menu-social-links lists-without-dots">
+                    <li class="dropdown-menu-social-links-item">
+                        <a href="" class="dropdown-menu-social-links-link link">Instagram</a>
+                    </li>
+        
+                    <li class="dropdown-menu-social-links-item">
+                        <a href="" class="dropdown-menu-social-links-link link">Twitter</a>
+                    </li>
+                    <li class="dropdown-menu-social-links-item">
+                        <a href="" class="dropdown-menu-social-links-link link">Facebook</a>
+                    </li>
+                    <li class="dropdown-menu-social-links-item">
+                        <a href="" class="dropdown-menu-social-links-link link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -459,7 +512,7 @@
     </footer> 
 
     <!-- modal -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal-window">
             <button type="button" class="modal-close" data-modal-close>
                 <svg width="18" height="18">
@@ -511,12 +564,13 @@
 
 
         </div>
-    </div> -->
+    </div>
 
 
    
 
     <script src="./js/modal.js"></script> 
+    <script src="./js/mobile-menu.js"></script> 
 
 
 </body></html>

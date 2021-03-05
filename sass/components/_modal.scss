@@ -211,3 +211,9 @@
   font-style: normal;
   color: var(--color-font-accent);
 }
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    display: none;
+  }
+}
