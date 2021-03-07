@@ -255,12 +255,28 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (max-width: 460px) {
+  .modal {
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .backdrop {
+    overflow-y: scroll;
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 93px;
     padding-bottom: 94px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .backdrop {
+    overflow-y: scroll;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -273,6 +289,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .backdrop {
+    overflow-y: scroll;
     padding-right: 159px;
     padding-left: 159px;
   }
@@ -286,6 +303,7 @@
 
 @media screen and (min-width: 1200px) {
   .backdrop {
+    overflow-y: scroll;
     padding-top: 221px;
     padding-bottom: 222px;
   }

@@ -445,12 +445,29 @@ a {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (max-width: 460px) {
+  .modal {
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .backdrop {
+    overflow-y: scroll;
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 93px;
     padding-bottom: 94px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .backdrop {
+    overflow-y: scroll;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -463,6 +480,7 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .backdrop {
+    overflow-y: scroll;
     padding-right: 159px;
     padding-left: 159px;
   }
@@ -476,6 +494,7 @@ a {
 
 @media screen and (min-width: 1200px) {
   .backdrop {
+    overflow-y: scroll;
     padding-top: 221px;
     padding-bottom: 222px;
   }
@@ -845,7 +864,6 @@ a {
   z-index: 1;
   position: fixed;
   width: 100%;
-  max-width: 480px;
   height: 100vh;
   top: 0;
   left: 50%;
@@ -906,9 +924,6 @@ a {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-  .nav-contacts {
-    margin-left: 84px;
-  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -931,7 +946,7 @@ a {
     margin-right: 93px;
   }
   .nav-contacts {
-    margin-left: 305px;
+    margin-left: auto;
   }
   .nav-contacts-item {
     padding-top: 32px;
@@ -955,9 +970,10 @@ a {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  background-size: 480px 400px;
 }
 
-.hero__title {
+.hero-title {
   margin-bottom: 30px;
   color: var(--color-font-ligh);
   font-size: 26px;
@@ -1025,7 +1041,7 @@ a {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desktop.jpg");
     background-size: 1600px 600px;
   }
-  .hero__title {
+  .hero-title {
     font-size: 44px;
     line-height: 1.36;
   }

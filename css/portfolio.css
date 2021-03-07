@@ -563,7 +563,6 @@ a {
   z-index: 1;
   position: fixed;
   width: 100%;
-  max-width: 480px;
   height: 100vh;
   top: 0;
   left: 50%;
@@ -624,9 +623,6 @@ a {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-  .nav-contacts {
-    margin-left: 84px;
-  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -649,7 +645,7 @@ a {
     margin-right: 93px;
   }
   .nav-contacts {
-    margin-left: 305px;
+    margin-left: auto;
   }
   .nav-contacts-item {
     padding-top: 32px;

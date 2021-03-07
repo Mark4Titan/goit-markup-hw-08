@@ -15,9 +15,10 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  background-size: 480px 400px;
 }
 
-.hero__title {
+.hero-title {
   margin-bottom: 30px;
   color: var(--color-font-ligh);
   font-size: 26px;
@@ -108,7 +109,7 @@
     background-size: 1600px 600px;
   }
 
-  .hero__title {
+  .hero-title {
     font-size: 44px;
     line-height: 1.36;
   }
