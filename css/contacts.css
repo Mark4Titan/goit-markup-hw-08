@@ -222,14 +222,18 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
   transition: all var(--timing-animation) var(--animation);
 }
 
 .modal {
+  width: 100%;
+  height: 100%;
   transform: scale(1);
   max-width: 450px;
   min-height: 581px;
+  overflow-y: scroll;
   margin-left: auto;
   margin-right: auto;
   padding-top: 40px;
@@ -242,7 +246,26 @@ a {
   transition-property: transform;
   transition-duration: var(--timing-animation);
   transition-timing-function: var(--animation);
-  transition-delay: 150ms;
+  transition-delay: 250ms;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 100%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-height: 580px) and (max-width: 480px) {
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -262,10 +285,14 @@ a {
   background-color: var(--color-font-ligh);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  margin-top: 8px;
+  margin-right: 8px;
   cursor: pointer;
-  transition-property: color;
-  transition-duration: var(--timing-animation);
-  transition-timing-function: var(--animation);
+  transition: color var(--timing-animation) var(--animation);
+}
+
+.modal-button:hover, .modal-button:focus {
+  fill: var(--color-font-accent);
 }
 
 .modal-button:hover,
@@ -279,7 +306,6 @@ a {
 
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
 }
 
@@ -454,20 +480,16 @@ a {
 @media screen and (max-width: 767px) {
   .backdrop {
     overflow-y: scroll;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 93px;
-    padding-bottom: 94px;
+    display: flex;
+    align-items: center;
   }
 }
 
 @media screen and (max-width: 400px) {
   .backdrop {
     overflow-y: scroll;
-    padding-right: 2px;
-    padding-left: 2px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -480,9 +502,8 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .backdrop {
-    overflow-y: scroll;
-    padding-right: 159px;
-    padding-left: 159px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -494,9 +515,8 @@ a {
 
 @media screen and (min-width: 1200px) {
   .backdrop {
-    overflow-y: scroll;
-    padding-top: 221px;
-    padding-bottom: 222px;
+    display: flex;
+    align-items: center;
   }
   .modal {
     min-width: 528px;
@@ -995,8 +1015,8 @@ a {
 .hero {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 118px;
-  padding-bottom: 118px;
+  padding-top: 134px;
+  padding-bottom: 134px;
   text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mobile.jpg");
   background-repeat: no-repeat;
@@ -1005,14 +1025,27 @@ a {
   background-size: 480px 400px;
 }
 
+@media screen and (min-width: 390px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+
 .hero-title {
   margin-bottom: 30px;
   color: var(--color-font-ligh);
-  font-size: 26px;
+  font-size: 16px;
   font-weight: 900;
   line-height: 1.615;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 390px) {
+  .hero-title {
+    font-size: 26px;
+  }
 }
 
 .hero-button {
