@@ -1,11 +1,20 @@
 body {
-  font-family: var(--text-font);
-
-  background-color: var(--white-text-bg-color);
+  color: var(--color-font-gray);
+  background-color: var(--color-font-ligh);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  font-size: 14px;
-  line-height: 1.714;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
 }
 
 h1,
@@ -15,36 +24,20 @@ h4,
 h5,
 h6,
 p {
-  /* в параграфах і заголовках скидаємо марджен */
-  margin: 0;
-}
-
-ul,
-ol {
-  /* в списках скидаємо відступи (зовнішні і внутрішні) */
   margin: 0;
   padding: 0;
 }
 
-img {
-  /* усі зображення стали блоками */
-  display: block;
-  max-width: 100%;
-  height: auto;
+a {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
 }
 
 .link {
   /* нижня лінія */
   text-decoration: none;
   transition: var(--timing-animation) var(--animation);
-}
-
-.address {
-  /* скидає італік */
-  font-style: normal;
-}
-
-.lists-without-dots {
-  /* вимикає цяточки в списках */
-  list-style: none;
 }

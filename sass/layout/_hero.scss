@@ -1,30 +1,139 @@
 .hero {
-  background-size: cover;
-  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  text-align: center;
+
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../img/bg/hero-bg.jpg");
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: var(--bg-footer-color);
-  text-align: center;
+    url("../images/hero/hero-mobile.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
-.hero-title {
-  color: var(--color-font-light);
-  @include font(44px, 900, 1.36);
-  text-align: center;
+.hero__title {
+  margin-bottom: 30px;
+  color: var(--color-font-ligh);
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.615;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  max-width: 700px;
-  margin-bottom: 30px;
 }
 
-.hero-board {
-  padding: 200px 252px;
-  text-align: center;
+.hero-button {
+  @include button;
+
+  &:hover,
+  &:focus {
+    background-color: #0e86e8;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+  screen and (min-resolution: 192dpi) and (min-width: 320px),
+  screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-mobile@2x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 3) and (min-width: 320px),
+  screen and (min-resolution: 288dpi) and (min-width: 320px),
+  screen and (min-resolution: 3dppx) and (min-width: 320px) {
+  px .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-mobile@3x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-tablet.jpg");
+    background-size: 768px 400px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 3) and (min-width: 768px),
+  screen and (min-resolution: 288dpi) and (min-width: 768px),
+  screen and (min-resolution: 3dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-tablet@3x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-desktop.jpg");
+    background-size: 1600px 600px;
+  }
+
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-desktop@2x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 3) and (min-width: 1200px),
+  screen and (min-resolution: 288dpi) and (min-width: 1200px),
+  screen and (min-resolution: 3dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-desktop@3x.jpg");
+  }
 }
